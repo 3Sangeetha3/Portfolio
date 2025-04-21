@@ -26,10 +26,9 @@ export const Home = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-right">
             Hi, I'm Sangeetha
           </h1>
-
           <p className="text-amber-50 text-lg md:text-xl mb-8 leading-relaxed">
             I am a passionate full-stack developer specializing in the MERN
             stack, crafting secure and efficient web applications that deliver
