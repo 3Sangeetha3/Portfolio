@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { BookOpen, Briefcase, Award } from "lucide-react";
+import { BookOpen, Briefcase, Award, Download } from "lucide-react";
 
 export const Resume = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,6 +7,13 @@ export const Resume = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const handleResumeClick = () => {
+    window.open(
+      "https://drive.google.com/file/d/1t8bQHs0bdvH4LVBk35zqoUNN60StDrlk/view?usp=sharing",
+      "_blank"
+    );
+  };
 
   return (
     <section
@@ -106,36 +113,49 @@ export const Resume = () => {
               <div className="relative">
                 <div className="absolute -left-10 top-1 w-4 h-4 rounded-full bg-[#FFBE5E]"></div>
                 <h3 className="text-xl font-bold text-white">Weather-Zone</h3>
-                <p className="text-[#FFBE5E] font-medium">Mar 2025 - Mar 2025</p>
+                <p className="text-[#FFBE5E] font-medium">
+                  Mar 2025 - Mar 2025
+                </p>
                 <p className="text-amber-50/70 italic mt-1">
                   React.js, Tailwind CSS, OpenWeatherMap API
                 </p>
                 <p className="text-amber-50 mt-2">
-                  Developed a responsive weather dashboard featuring real-time data, 5-day forecast, temperature unit toggle, dark mode, and optimized performance.
+                  Developed a responsive weather dashboard featuring real-time
+                  data, 5-day forecast, temperature unit toggle, dark mode, and
+                  optimized performance.
                 </p>
               </div>
 
               <div className="relative">
                 <div className="absolute -left-10 top-1 w-4 h-4 rounded-full bg-[#FFBE5E]"></div>
                 <h3 className="text-xl font-bold text-white">PicLink</h3>
-                <p className="text-[#FFBE5E] font-medium">Mar 2025 - Mar 2025</p>
+                <p className="text-[#FFBE5E] font-medium">
+                  Mar 2025 - Mar 2025
+                </p>
                 <p className="text-amber-50/70 italic mt-1">
-                  React.js, Node.js, ExpressJs, Tailwind CSS, GitHub’s Octokit API
+                  React.js, Node.js, ExpressJs, Tailwind CSS, GitHub's Octokit
+                  API
                 </p>
                 <p className="text-amber-50 mt-2">
-                  Built an image hosting platform with GitHub integration, enabling repository-based CDN hosting and advanced API management.
+                  Built an image hosting platform with GitHub integration,
+                  enabling repository-based CDN hosting and advanced API
+                  management.
                 </p>
               </div>
 
               <div className="relative">
                 <div className="absolute -left-10 top-1 w-4 h-4 rounded-full bg-[#FFBE5E]"></div>
                 <h3 className="text-xl font-bold text-white">Writely</h3>
-                <p className="text-[#FFBE5E] font-medium">Jun 2024 - Mar 2025</p>
+                <p className="text-[#FFBE5E] font-medium">
+                  Jun 2024 - Mar 2025
+                </p>
                 <p className="text-amber-50/70 italic mt-1">
                   React.js, Node.js, ExpressJs, MongoDB, Tailwind CSS
                 </p>
                 <p className="text-amber-50 mt-2">
-                  Created a social blogging platform with secure authentication, email verification, and full CRUD operations for articles and profiles.
+                  Created a social blogging platform with secure authentication,
+                  email verification, and full CRUD operations for articles and
+                  profiles.
                 </p>
               </div>
             </div>
@@ -251,6 +271,17 @@ export const Resume = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Download Resume Button*/}
+        <div className="mt-20 flex justify-center">
+          <button
+            onClick={handleResumeClick}
+            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] text-black font-medium rounded-lg transition-all hover:shadow-lg hover:shadow-[#FFBE5E]/20 hover:scale-105"
+          >
+            <Download size={20} />
+            Download Resume
+          </button>
         </div>
       </div>
     </section>
