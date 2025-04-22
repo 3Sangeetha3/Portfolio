@@ -88,7 +88,7 @@ export const Projects = () => {
         "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745322192545-933518085.png",
         "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745332538265-775510015.png",
         "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745332578049-722635369.png",
-        "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745332578049-722635369.png",
+        "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745333271647-382596422.png",
       ],
       tags: ["React.js", "Node.js", "MongoDB", "Express.js", "fullstack"],
       liveLink: "https://writely.3sangeetha3.tech/",
