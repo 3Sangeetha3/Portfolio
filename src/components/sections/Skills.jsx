@@ -78,55 +78,57 @@ export const Skills = () => {
       className="min-h-screen mx-auto flex items-center justify-center relative bg-[#121212] py-20"
     >
       {/* Background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-30 left-30 w-64 h-64 rounded-full bg-[#FFBE5E]/10 blur-3xl"></div>
-        <div className="absolute bottom-15 right-20 w-72 h-72 rounded-full bg-[#FCD26B]/5 blur-3xl"></div>
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-80 h-80 rounded-full bg-[#FFBE5E]/5 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 rounded-full bg-[#FCD26B]/3 blur-3xl animate-pulse delay-1000"></div>
       </div>
+      
       <div className="container max-w-7xl px-6 relative z-10">
-        <div className="flex items-center mb-12 pb-">
-          <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
+        <div className="flex items-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#FCD26B] via-[#FFBE5E] to-[#FCD26B] bg-clip-text text-transparent leading-tight tracking-tight">
             My Skills
           </h1>
-          <div className="ml-4 h-1 flex-grow bg-gradient-to-r from-[#FFBE5E]/20 to-transparent rounded-full"></div>
+          <div className="ml-6 h-1 flex-grow bg-gradient-to-r from-[#FFBE5E]/30 to-transparent rounded-full"></div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
           {skillsData.map((category, index) => (
             <div
               key={index}
               className={`transition-all duration-1000 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-12"
+                  : "opacity-0 translate-y-16"
               }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="group relative h-full overflow-hidden rounded-2xl bg-[#1E1E1F] hover:bg-[#202022] transition-all duration-300 hover:shadow-lg hover:shadow-[#FFBE5E]/10">
-                {/* Gradient border on hover */}
-                <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] group-hover:opacity-100">
-                  <div className="absolute inset-[1px] bg-[#1E1E1F] rounded-2xl"></div>
-                </div>
+              <div className="group relative h-full rounded-2xl bg-gradient-to-br from-[#1E1E1F]/80 to-[#252526]/80 backdrop-blur-lg border border-[#2A2A2C] hover:shadow-2xl hover:shadow-[#FFBE5E]/5 transition-all duration-500 hover:-translate-y-1">
+                {/* Card glow effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FCD26B]/0 via-[#FFBE5E]/10 to-[#FCD26B]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
                 {/* Content container */}
-                <div className="relative h-full p-12 z-10">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="text-[#FFBE5E] bg-[#282829] p-3 rounded-lg">
+                <div className="relative h-full p-8">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="text-[#FFBE5E] bg-[#2A2A2C]/50 p-3 rounded-xl transform group-hover:scale-110 transition-transform duration-300">
                       {category.icon}
                     </div>
-                    <h3 className="text-2xl font-bold text-white">
+                    <h3 className="text-2xl font-semibold text-white tracking-wide">
                       {category.title}
                     </h3>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  
+                  <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 text-sm bg-[#282829] text-[#FAFAFA] rounded-full hover:bg-[#383838] transition-colors duration-200 hover:text-[#FFBE5E] flex items-center gap-1"
+                        className="group/skill px-4 py-2 text-sm bg-[#2A2A2C]/50 text-[#E0E0E0] rounded-full hover:bg-[#383838]/70 transition-all duration-300 hover:text-[#FFBE5E] flex items-center gap-2 cursor-default transform hover:scale-105 hover:shadow-md hover:shadow-[#FFBE5E]/20"
                       >
                         <img 
                           src={skill.icon} 
-                          alt="" 
-                          className="w-4 h-4 object-contain"
+                          alt={skill.name}
+                          className="w-5 h-5 object-contain group-hover/skill:animate-wiggle"
                         />
-                        {skill.name}
+                        <span className="font-medium">{skill.name}</span>
                       </span>
                     ))}
                   </div>
