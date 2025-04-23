@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Menu, EllipsisVertical } from 'lucide-react';
+import { DropdownMenu } from './DropdownMenu';
 
 export const Navbar = ({ menuOpen, setMenuOpen }) => {
     useEffect(() => {
@@ -26,7 +27,7 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
                         <a href="#skills" className='text-amber-50 text-lg hover:text-[#FCD36C] transition-colors'>Skills</a>
                         <a href="#projects" className='text-amber-50 text-lg hover:text-[#FCD36C] transition-colors'>Projects</a>
                         <a href="#contact" className='text-amber-50 text-lg hover:text-[#FCD36C] transition-colors'>Contact</a>
-                        <a href="#more" className='text-amber-50 text-lg hover:text-[#FCD36C] transition-colors'><EllipsisVertical /></a>
+                        <DropdownMenu />
                     </div>
                 </div>
             </div>

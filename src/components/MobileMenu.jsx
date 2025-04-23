@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Menu, EllipsisVertical, Pointer, X } from "lucide-react";
+import { DropdownMenu } from "./DropdownMenu";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -84,15 +85,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
           >
             Contact
           </a>
-          <a
-            href="#more"
-            onClick={() => setMenuOpen(false)}
-            className={`p-2 rounded-full bg-[#FCD36C]/10 hover:bg-[#FFBE5E]/30 text-2xl font-semibold text-amber-50 hover:text-[#FCD36C] my-4 hover:scale-105 transform transition-transform duration-300 ${
-              menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-            }`}
-          >
-            <EllipsisVertical className="text-amber-400"/>
-          </a>
+          <DropdownMenu />
         </div>
       </div>
     </div>
