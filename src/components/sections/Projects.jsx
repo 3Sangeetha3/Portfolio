@@ -122,7 +122,7 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen mx-auto relative bg-gradient-to-b from-[#121212] to-[#181818] py-24"
+      className="min-h-screen mx-auto relative bg-[#121212] py-24"
     >
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-40 left-20 w-72 h-72 rounded-full bg-[#FFBE5E]/10 blur-3xl animate-pulse"></div>
