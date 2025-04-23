@@ -27,7 +27,7 @@ export const Resume = () => {
       </div>
 
       <div className="container max-w-7xl px-6 relative z-10">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-right border-b border-[#FFBE5E]/20 pb-4">
+        <h1 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight border-b border-[#FFBE5E]/20 pb-4">
           Resume
         </h1>
 
