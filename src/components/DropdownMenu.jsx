@@ -66,13 +66,13 @@ export const DropdownMenu = () => {
               <Code className="mr-3 h-4 w-4 text-[#FFBE5E]" />
               <span>Open-Source</span>
             </a> */}
-            <a
+            {/* <a
               href="#co-curricular"
               className="flex items-center px-4 py-3 text-sm text-amber-50 hover:bg-[#282829] hover:text-[#FCD36C] transition-colors"
             >
               <Users className="mr-3 h-4 w-4 text-[#FFBE5E]" />
               <span>Co-curricular Activities</span>
-            </a>
+            </a> */}
           </div>
         </div>
       )}
