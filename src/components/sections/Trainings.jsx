@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { BookOpen, Calendar, Award, ChevronRight } from "lucide-react";
+import { BookOpen, Calendar, Award, ChevronRight, Code } from "lucide-react";
 
 export const Trainings = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeCertificate, setActiveCertificate] = useState(0);
-  
+
   const certificates = [
     {
       id: 1,
@@ -12,7 +12,8 @@ export const Trainings = () => {
       issuer: "Cipher Schools",
       date: "July 2024",
       type: "training",
-      imageUrl: "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745474403128-569291240.png" 
+      imageUrl:
+        "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745474403128-569291240.png",
     },
     {
       id: 2,
@@ -20,8 +21,18 @@ export const Trainings = () => {
       issuer: "Cipher Schools",
       date: "July 2024",
       type: "project",
-      imageUrl: "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745474892266-348404129.png"
-    }
+      imageUrl:
+        "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745474892266-348404129.png",
+    },
+    {
+      id: 3,
+      title: "DSA Interview Preparation",
+      issuer: "Cipher Schools",
+      date: "September 2024",
+      type: "training",
+      imageUrl:
+        "https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745475483634-23503638.png",
+    },
   ];
 
   useEffect(() => {
@@ -33,10 +44,10 @@ export const Trainings = () => {
       },
       { threshold: 0.2 }
     );
-    
+
     const section = document.getElementById("trainings");
     if (section) observer.observe(section);
-    
+
     return () => {
       if (section) observer.unobserve(section);
     };
@@ -67,98 +78,191 @@ export const Trainings = () => {
             technical expertise
           </p>
         </div>
-        {/* Training card */}
-        <div
-          className={`bg-[#1E1E1F] border border-[#383838] rounded-xl p-6 md:p-8 shadow-lg transition-all duration-1000 delay-300 hover:shadow-[#FFBE5E]/10 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-          }`}
-        >
-          <div className="flex flex-col md:flex-row gap-6 items-start">
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-[#383838] flex items-center justify-center shadow-inner shadow-black/30">
-                <BookOpen size={32} className="text-[#FFBE5E]" />
-              </div>
-            </div>
-            <div className="flex-1">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 className="text-2xl font-bold text-[#FAFAFA]">
-                  Cipher Schools
-                </h3>
-                <div className="flex items-center mt-2 md:mt-0 text-amber-50/70 space-x-2">
-                  <Calendar size={16} />
-                  <span className="text-sm">Jun' 24 - Jul' 24</span>
+
+        {/* Training cards */}
+        <div className="space-y-8">
+          {/* MERN Training Card */}
+          <div
+            className={`bg-[#1E1E1F] border border-[#383838] rounded-xl p-6 md:p-8 shadow-lg transition-all duration-1000 delay-300 hover:shadow-[#FFBE5E]/10 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
+          >
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-[#383838] flex items-center justify-center shadow-inner shadow-black/30">
+                  <BookOpen size={32} className="text-[#FFBE5E]" />
                 </div>
               </div>
-              <h4 className="text-lg font-medium text-[#FCD26B] mb-4">
-                Summer Training in Full Stack Development using MERN
-              </h4>
-              <ul className="space-y-4 text-amber-50/90">
-                <li className="flex items-start gap-3">
-                  <ChevronRight
-                    size={20}
-                    className="text-[#FFBE5E] flex-shrink-0 mt-1"
-                  />
-                  <p>
-                    Developed core React and Node.js skills by building a
-                    Tic-Tac-Toe game and a command-line "Notes" app, mastering
-                    component structure, state management, and file-based data
-                    handling.
-                  </p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight
-                    size={20}
-                    className="text-[#FFBE5E] flex-shrink-0 mt-1"
-                  />
-                  <p>
-                    Created "Writely," a full-stack blogging platform with
-                    MongoDB, Express, React, and Node.js–implemented JWT-based
-                    authentication for secure sign-up/login, post creation,
-                    tagging, and commenting to practice end-to-end data flow.
-                  </p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ChevronRight
-                    size={20}
-                    className="text-[#FFBE5E] flex-shrink-0 mt-1"
-                  />
-                  <p>
-                    Explored new frameworks and tools through weekly projects
-                    and live sessions - built RESTful APIs, resolved CORS
-                    issues, optimised database operations, and utilised Tailwind
-                    CSS for rapid UI styling.
-                  </p>
-                </li>
-              </ul>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
-                  React.js
-                </span>
-                <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
-                  Node.js
-                </span>
-                <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
-                  MongoDB
-                </span>
-                <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
-                  Express.js
-                </span>
-                <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
-                  JWT Auth
-                </span>
-                <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
-                  RESTful APIs
-                </span>
-                <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
-                  Tailwind CSS
-                </span>
+              <div className="flex-1">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-2xl font-bold text-[#FAFAFA]">
+                    Cipher Schools
+                  </h3>
+                  <div className="flex items-center mt-2 md:mt-0 text-amber-50/70 space-x-2">
+                    <Calendar size={16} />
+                    <span className="text-sm">Jun' 24 - Jul' 24</span>
+                  </div>
+                </div>
+                <h4 className="text-lg font-medium text-[#FCD26B] mb-4">
+                  Summer Training in Full Stack Development using MERN
+                </h4>
+                <ul className="space-y-4 text-amber-50/90">
+                  <li className="flex items-start gap-3">
+                    <ChevronRight
+                      size={20}
+                      className="text-[#FFBE5E] flex-shrink-0 mt-1"
+                    />
+                    <p>
+                      Developed core React and Node.js skills by building a
+                      Tic-Tac-Toe game and a command-line "Notes" app, mastering
+                      component structure, state management, and file-based data
+                      handling.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <ChevronRight
+                      size={20}
+                      className="text-[#FFBE5E] flex-shrink-0 mt-1"
+                    />
+                    <p>
+                      Created "Writely," a full-stack blogging platform with
+                      MongoDB, Express, React, and Node.js-implemented JWT-based
+                      authentication for secure sign-up/login, post creation,
+                      tagging, and commenting to practice end-to-end data flow.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <ChevronRight
+                      size={20}
+                      className="text-[#FFBE5E] flex-shrink-0 mt-1"
+                    />
+                    <p>
+                      Explored new frameworks and tools through weekly projects
+                      and live sessions - built RESTful APIs, resolved CORS
+                      issues, optimised database operations, and utilised
+                      Tailwind CSS for rapid UI styling.
+                    </p>
+                  </li>
+                </ul>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    React.js
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    Node.js
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    MongoDB
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    Express.js
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    JWT Auth
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    RESTful APIs
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    Tailwind CSS
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* DSA Training Card */}
+          <div
+            className={`bg-[#1E1E1F] border border-[#383838] rounded-xl p-6 md:p-8 shadow-lg transition-all duration-1000 delay-500 hover:shadow-[#FFBE5E]/10 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+            }`}
+          >
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-[#383838] flex items-center justify-center shadow-inner shadow-black/30">
+                  <Code size={32} className="text-[#FFBE5E]" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-2xl font-bold text-[#FAFAFA]">
+                    Cipher Schools
+                  </h3>
+                  <div className="flex items-center mt-2 md:mt-0 text-amber-50/70 space-x-2">
+                    <Calendar size={16} />
+                    <span className="text-sm">Sep' 24</span>
+                  </div>
+                </div>
+                <h4 className="text-lg font-medium text-[#FCD26B] mb-4">
+                  Data Structures & Algorithms - Interview Preparation
+                </h4>
+                <ul className="space-y-4 text-amber-50/90">
+                  <li className="flex items-start gap-3">
+                    <ChevronRight
+                      size={20}
+                      className="text-[#FFBE5E] flex-shrink-0 mt-1"
+                    />
+                    <p>
+                      Mastered essential data structures including arrays,
+                      linked lists, stacks, queues, trees, and graphs, with
+                      in-depth understanding of their implementation and
+                      optimization.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <ChevronRight
+                      size={20}
+                      className="text-[#FFBE5E] flex-shrink-0 mt-1"
+                    />
+                    <p>
+                      Developed strong problem-solving skills through practicing
+                      algorithmic techniques like recursion, dynamic
+                      programming, greedy algorithms, and backtracking on
+                      various coding problems.
+                    </p>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <ChevronRight
+                      size={20}
+                      className="text-[#FFBE5E] flex-shrink-0 mt-1"
+                    />
+                    <p>
+                      Learned time and space complexity analysis, code
+                      optimization techniques, and interview strategies
+                      specifically designed for technical interviews at leading
+                      tech companies.
+                    </p>
+                  </li>
+                </ul>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    Data Structures
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    Algorithms
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    Problem Solving
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    Time Complexity
+                  </span>
+                  <span className="px-3 py-1 bg-[#282829] rounded-full text-sm text-amber-50/80">
+                    Interview Prep
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
         {/* Certificates Section */}
         <div
-          className={`mt-16 transition-all duration-1000 delay-500 ${
+          className={`mt-16 transition-all duration-1000 delay-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
@@ -216,11 +320,14 @@ export const Trainings = () => {
               <p className="text-center text-amber-50/70 text-sm max-w-xl">
                 {activeCertificate === 0
                   ? "This certificate was awarded upon successful completion of the Summer Training in Full Stack Development using MERN stack at Cipher Schools."
-                  : "This project completion certificate was awarded for successfully building and deploying the 'Writely' blogging platform project at Cipher Schools."}
+                  : activeCertificate === 1
+                  ? "This project completion certificate was awarded for successfully building and deploying the 'Writely' blogging platform project at Cipher Schools."
+                  : "This certificate was awarded for successfully completing the Data Structures & Algorithms Interview Preparation training at Cipher Schools."}
               </p>
             </div>
           </div>
         </div>
+
         {/* CTA Button */}
         <div className="mt-12 text-center">
           <a
