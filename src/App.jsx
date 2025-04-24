@@ -11,6 +11,7 @@ import { Skills } from './components/sections/Skills';
 import { Projects } from './components/sections/Projects';
 import { Contact } from './components/sections/Contact';
 import { Trainings } from './components/sections/Trainings';
+import { Certifications } from './components/sections/Certfications';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Resume />
         <Trainings />
         <Projects />
+        <Certifications />
         <Contact />
       </div>
     </div>

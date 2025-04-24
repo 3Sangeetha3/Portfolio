@@ -260,75 +260,7 @@ export const Trainings = () => {
           </div>
         </div>
 
-        {/* Certificates Section */}
-        <div
-          className={`mt-16 transition-all duration-1000 delay-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-          }`}
-        >
-          <div className="text-center mb-10">
-            <h3 className="text-2xl font-bold text-[#FAFAFA] mb-4">
-              <span className="inline-flex items-center gap-2">
-                <Award className="text-[#FFBE5E]" />
-                Certifications
-              </span>
-            </h3>
-            <p className="text-amber-50/80 max-w-2xl mx-auto">
-              Verified credentials that showcase my professional development and
-              achievement
-            </p>
-          </div>
-          <div className="bg-[#1E1E1F] border border-[#383838] rounded-xl p-6 md:p-8 shadow-lg">
-            <div className="flex flex-wrap gap-4 mb-8 justify-center">
-              {certificates.map((cert, index) => (
-                <button
-                  key={cert.id}
-                  onClick={() => setActiveCertificate(index)}
-                  className={`px-5 py-3 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2
-                  ${
-                    activeCertificate === index
-                      ? "bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] text-[#121212]"
-                      : "bg-[#282829] text-amber-50/80 hover:bg-[#333333]"
-                  }`}
-                >
-                  <Award size={16} />
-                  {cert.title}
-                </button>
-              ))}
-            </div>
-            <div className="flex flex-col items-center">
-              <div className="relative w-full max-w-2xl aspect-[1.4/1] rounded-lg overflow-hidden mb-6 border-2 border-[#383838] shadow-xl">
-                <img
-                  src={certificates[activeCertificate].imageUrl}
-                  alt={certificates[activeCertificate].title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                  <h4 className="text-xl font-bold text-white">
-                    {certificates[activeCertificate].title}
-                  </h4>
-                  <div className="flex items-center justify-between mt-2">
-                    <p className="text-amber-50/90">
-                      {certificates[activeCertificate].issuer}
-                    </p>
-                    <p className="text-amber-50/70 text-sm">
-                      {certificates[activeCertificate].date}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <p className="text-center text-amber-50/70 text-sm max-w-xl">
-                {activeCertificate === 0
-                  ? "This certificate was awarded upon successful completion of the Summer Training in Full Stack Development using MERN stack at Cipher Schools."
-                  : activeCertificate === 1
-                  ? "This project completion certificate was awarded for successfully building and deploying the 'Writely' blogging platform project at Cipher Schools."
-                  : "This certificate was awarded for successfully completing the Data Structures & Algorithms Interview Preparation training at Cipher Schools."}
-              </p>
-            </div>
-          </div>
-        </div>
 
-        {/* CTA Button */}
         <div className="mt-12 text-center">
           <a
             href="#projects"
