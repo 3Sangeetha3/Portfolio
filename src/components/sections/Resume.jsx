@@ -10,7 +10,7 @@ export const Resume = () => {
 
   const handleResumeClick = () => {
     window.open(
-      "https://drive.google.com/file/d/1t8bQHs0bdvH4LVBk35zqoUNN60StDrlk/view?usp=sharing",
+      "https://drive.google.com/file/d/1gVjua-fMJOoqvfEDczSL9NV7yLAbLzu5/view?usp=sharing",
       "_blank"
     );
   };
