@@ -10,6 +10,7 @@ import { Resume } from './components/sections/Resume';
 import { Skills } from './components/sections/Skills';
 import { Projects } from './components/sections/Projects';
 import { Contact } from './components/sections/Contact';
+import { Trainings } from './components/sections/Trainings';
 
 
 function App() {
@@ -24,8 +25,9 @@ function App() {
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <Home />
         <About />
-        <Resume />
         <Skills />
+        <Resume />
+        <Trainings />
         <Projects />
         <Contact />
       </div>
