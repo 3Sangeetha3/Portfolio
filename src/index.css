@@ -33,3 +33,35 @@ html, body {
     animation: loading 2s ease infinite;
   }
 }
+
+.card {
+  position: relative;
+  z-index: 0;
+  background-color: #121212; /* card background */
+  border-radius: 0.5rem; /* optional: adjust as needed */
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  background: linear-gradient(90deg, #FCD26B, #FFBE5E);
+  border-radius: inherit;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.card:hover::before {
+  opacity: 1; 
+}

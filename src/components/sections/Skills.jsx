@@ -102,7 +102,7 @@ export const Skills = () => {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="group relative h-full rounded-2xl bg-gradient-to-br from-[#1E1E1F]/80 to-[#252526]/80 backdrop-blur-lg border border-[#2A2A2C] hover:shadow-2xl hover:shadow-[#FFBE5E]/5 transition-all duration-500 hover:-translate-y-1">
+              <div className="card group relative h-full rounded-2xl bg-gradient-to-br from-[#1E1E1F]/80 to-[#252526]/80 backdrop-blur-lg border border-[#2A2A2C] hover:shadow-2xl hover:shadow-[#FFBE5E]/5 transition-all duration-500 hover:-translate-y-1">
                 {/* Card glow effect */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FCD26B]/0 via-[#FFBE5E]/10 to-[#FCD26B]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
