@@ -1,11 +1,34 @@
 import { Github, Code2, LinkedinIcon, DownloadIcon, Monitor, Layers, PaintBucket } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import Typed from 'typed.js';
 
 export const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
-  
+  const typedElementRef = useRef(null);
+  let typedInstance;
+
   useEffect(() => {
     setIsVisible(true);
+
+    // Initialize Typed.js
+    if (typedElementRef.current) {
+      typedInstance = new Typed(typedElementRef.current, {
+        strings: [
+          "Sangeetha"
+        ],
+        typeSpeed: 50,
+        backSpeed: 80,
+        backDelay: 500,
+        loop: true,
+      });
+    }
+    
+    // Cleanup function
+    return () => {
+      if (typedInstance) {
+        typedInstance.destroy();
+      }
+    };
   }, []);
 
   const handleDownloadResume = () => {
@@ -33,15 +56,18 @@ export const Home = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          <h1 className="text-5xl py-3 md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
-            Hello, I'm Sangeetha
+          <h1 className="text-3xl py-0 md:text-4xl lg:text-5xl m-0 font-bold bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
+            Hello, I'm
+          </h1>
+          <h1 className="text-5xl py-3 md:text-6xl lg:text-7xl mb-6 font-bold bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
+            <span ref={typedElementRef}></span>
           </h1>
           <p className="text-amber-50 text-lg md:text-xl mb-8 leading-relaxed">
             I am a passionate full-stack developer specializing in the MERN
             stack, crafting secure and efficient web applications that deliver
             exceptional user experiences.
           </p>
-
+ 
           {/* Skill Tags */}
           <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-8">
             <span className="px-3 py-1 bg-[#1E1E1F] text-[#FFBE5E] rounded-full text-sm flex items-center gap-1 border border-[#FFBE5E]/20">
