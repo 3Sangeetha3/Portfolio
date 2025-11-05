@@ -10,24 +10,24 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen mx-auto flex items-center justify-center relative bg-[#121212] py-20"
+      className="min-h-screen mx-auto flex items-center justify-center relative bg-[#121212] py-16 md:py-20 px-4"
     >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-40 right-20 w-64 h-64 rounded-full bg-[#FFBE5E]/10 blur-3xl"></div>
-        <div className="absolute bottom-40 left-20 w-72 h-72 rounded-full bg-[#FCD26B]/5 blur-3xl"></div>
+        <div className="absolute top-20 md:top-40 right-10 md:right-20 w-32 md:w-64 h-32 md:h-64 rounded-full bg-[#FFBE5E]/10 blur-3xl"></div>
+        <div className="absolute bottom-20 md:bottom-40 left-10 md:left-20 w-40 md:w-72 h-40 md:h-72 rounded-full bg-[#FCD26B]/5 blur-3xl"></div>
       </div>
 
-      <div className="container max-w-7xl flex flex-col-reverse md:flex-row items-center justify-between gap-12 px-6 relative z-10">
+      <div className="container max-w-7xl flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12 px-4 md:px-6 relative z-10">
         {/* Image section */}
         <div
           className={`relative transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          <div className="absolute inset-0 -m-4 rounded-2xl border border-[#FFBE5E]/20"></div>
-          <div className="absolute inset-0 -m-8 rounded-2xl border border-[#FFBE5E]/10"></div>
-          <div className="w-64 h-80 md:w-80 md:h-96 relative rounded-2xl overflow-hidden border-2 border-[#FFBE5E]/30 shadow-xl shadow-[#FFBE5E]/20">
+          <div className="absolute inset-0 -m-2 md:-m-4 rounded-2xl border border-[#FFBE5E]/20"></div>
+          <div className="absolute inset-0 -m-4 md:-m-8 rounded-2xl border border-[#FFBE5E]/10"></div>
+          <div className="w-48 h-60 md:w-64 md:h-80 lg:w-80 lg:h-96 relative rounded-2xl overflow-hidden border-2 border-[#FFBE5E]/30 shadow-xl shadow-[#FFBE5E]/20 mx-auto">
             <img
               src="https://cdn.jsdelivr.net/gh/3sangeetha3/PicLink@Images-branch/images/1745211660912-520444358.png"
               alt="Sangeetha Working"
@@ -42,12 +42,12 @@ export const About = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
             About Me
           </h2>
           
-          <div className="space-y-6 text-amber-50">
-            <p className="text-lg leading-relaxed">
+          <div className="space-y-4 md:space-y-6 text-amber-50 px-2 md:px-0">
+            <p className="text-base md:text-lg leading-relaxed">
               Ever wondered what happens when a love for coding meets a passion for
               design? You get someone like me—Hi, I'm Jadamal Sangeetha Choudhary, a
               Full-Stack Developer and UI/UX enthusiast who turns coffee into clean

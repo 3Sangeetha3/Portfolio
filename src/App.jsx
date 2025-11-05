@@ -4,6 +4,7 @@ import "./index.css";
 import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { MobileMenu } from './components/MobileMenu';
+import { BottomNavigation } from './components/BottomNavigation';
 import { Home } from './components/sections/Home';
 import { About } from './components/sections/About';
 import { Resume } from './components/sections/Resume';
@@ -24,6 +25,7 @@ function App() {
       <div className={`min-h-screen transition-opacity duration-700 $isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <BottomNavigation />
         <Home />
         <About />
         <Skills />

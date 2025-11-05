@@ -6,6 +6,7 @@ import {
   Filter,
   ChevronLeft,
   ChevronRight,
+  Package,
 } from "lucide-react";
 
 export const Projects = () => {
@@ -57,6 +58,21 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Brand Model Variant Selector",
+      description:
+        "A lightweight and efficient npm package for motorcycle data selection with 126 brands, 108 models, and 166 variants. Features comprehensive database, optimized filtering, and with automated CI/CD pipeline.",
+      images: [
+        "https://cdn.jsdelivr.net/gh/3Sangeetha3/writely-images-cdn@main/npm.png",
+      ],
+      tags: ["Node.js", "NPM Package", "Open Source", "CI/CD", "fullstack"],
+      liveLink: "https://www.npmjs.com/package/brand-model-variant-selector",
+      githubLink: "https://github.com/3Sangeetha3/brand-model-variant-selector",
+      isPackage: true,
+      completedDate: "Nov 2025",
+      startedDate: "Sep 2025"
+    },
+    {
+      id: 2,
       title: "Weather-Zone",
       description:
         "Responsive weather dashboard featuring real-time data, 5-day forecast, temperature unit toggle, and dark mode with optimized performance.",
@@ -68,7 +84,7 @@ export const Projects = () => {
       githubLink: "https://github.com/3Sangeetha3/Weather-Zone",
     },
     {
-      id: 2,
+      id: 3,
       title: "PicLink",
       description:
         "Image hosting platform with GitHub integration, enabling repository-based CDN hosting and advanced API management.",
@@ -80,7 +96,7 @@ export const Projects = () => {
       githubLink: "https://github.com/3Sangeetha3/PicLink",
     },
     {
-      id: 3,
+      id: 4,
       title: "Writely",
       description:
         "Social blogging platform with secure authentication, email verification, and full CRUD operations for articles and profiles.",
@@ -95,7 +111,7 @@ export const Projects = () => {
       githubLink: "https://github.com/3Sangeetha3/Writely",
     },
     {
-      id: 4,
+      id: 5,
       title: "KOZA",
       description:
         "This is an E-commerce frontend website made with HTML, CSS, javascript and Bootstrap.",
@@ -131,31 +147,31 @@ export const Projects = () => {
           style={{ animationDelay: "1s" }}
         ></div>
       </div>
-      <div className="container max-w-7xl mx-auto px-6 relative z-10">
-        <div className="mb-16">
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div className="mb-12 md:mb-16">
           <div className="relative inline-block">
-            <h1 className="text-5xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] bg-clip-text text-transparent leading-tight">
               Projects
             </h1>
             <div className="h-1 w-3/4 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] rounded-full"></div>
           </div>
-          <p className="text-amber-50/90 text-lg mt-6 max-w-3xl leading-relaxed">
+          <p className="text-amber-50/90 text-base sm:text-lg mt-4 md:mt-6 max-w-3xl leading-relaxed">
             Here are some of my recent projects that showcase my skills in
-            front-end and back-end development. Each project demonstrates
-            different aspects of my technical abilities and problem-solving
-            approach.
+            front-end and back-end development, including open source contributions and NPM packages. 
+            Each project demonstrates different aspects of my technical abilities and problem-solving
+            approach, from full-stack web applications to published packages with automated CI/CD.
           </p>
         </div>
-        <div className="flex flex-wrap items-center gap-3 mb-16">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-12 md:mb-16">
           <div className="flex items-center mr-2 text-amber-50/80">
-            <Filter size={18} className="mr-2" />
-            <span className="text-sm uppercase tracking-wider font-medium">
+            <Filter size={16} className="mr-1 sm:mr-2" />
+            <span className="text-xs sm:text-sm uppercase tracking-wider font-medium">
               Filter:
             </span>
           </div>
           <button
             onClick={() => setSelectedFilter("all")}
-            className={`px-5 py-2.5 rounded-lg transition-all duration-300 text-sm font-medium ${
+            className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-300 text-xs sm:text-sm font-medium ${
               selectedFilter === "all"
                 ? "bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] text-[#121212]"
                 : "bg-[#1E1E1F] text-amber-50/90 hover:bg-[#282829] border border-transparent hover:border-[#FFBE5E]/20"
@@ -165,7 +181,7 @@ export const Projects = () => {
           </button>
           <button
             onClick={() => setSelectedFilter("frontend")}
-            className={`px-5 py-2.5 rounded-lg transition-all duration-300 text-sm font-medium ${
+            className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-300 text-xs sm:text-sm font-medium ${
               selectedFilter === "frontend"
                 ? "bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] text-[#121212]"
                 : "bg-[#1E1E1F] text-amber-50/90 hover:bg-[#282829] border border-transparent hover:border-[#FFBE5E]/20"
@@ -175,7 +191,7 @@ export const Projects = () => {
           </button>
           <button
             onClick={() => setSelectedFilter("fullstack")}
-            className={`px-5 py-2.5 rounded-lg transition-all duration-300 text-sm font-medium ${
+            className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-300 text-xs sm:text-sm font-medium ${
               selectedFilter === "fullstack"
                 ? "bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] text-[#121212]"
                 : "bg-[#1E1E1F] text-amber-50/90 hover:bg-[#282829] border border-transparent hover:border-[#FFBE5E]/20"
@@ -183,16 +199,22 @@ export const Projects = () => {
           >
             Full Stack
           </button>
+          <button
+            onClick={() => setSelectedFilter("Open Source")}
+            className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-lg transition-all duration-300 text-xs sm:text-sm font-medium ${
+              selectedFilter === "Open Source"
+                ? "bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] text-[#121212]"
+                : "bg-[#1E1E1F] text-amber-50/90 hover:bg-[#282829] border border-transparent hover:border-[#FFBE5E]/20"
+            }`}
+          >
+            Open Source
+          </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8">
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`${
-                index % 4 === 0 || index % 4 === 3
-                  ? "md:col-span-1"
-                  : "md:col-span-1"
-              } transition-all duration-500 ${
+              className={`transition-all duration-500 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-12"
@@ -204,7 +226,7 @@ export const Projects = () => {
                 onMouseEnter={() => setIsHovering(project.id)}
                 onMouseLeave={() => setIsHovering(null)}
               >
-                <div className="relative h-80 md:h-96 overflow-hidden">
+                <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 overflow-hidden">
                   <div
                     className={`absolute inset-0 z-10 transition-opacity duration-300 ${
                       isHovering === project.id ? "opacity-0" : "opacity-100"
@@ -281,9 +303,9 @@ export const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-4 bg-[#FFBE5E] text-[#121212] rounded-full hover:bg-[#FCD26B] transition-all duration-300 hover:scale-110 shadow-lg"
-                        aria-label="View live site"
+                        aria-label={project.isPackage ? "View NPM package" : "View live site"}
                       >
-                        <ExternalLink size={20} />
+                        {project.isPackage ? <Package size={20} /> : <ExternalLink size={20} />}
                       </a>
                       <a
                         href={project.githubLink}
@@ -298,15 +320,27 @@ export const Projects = () => {
                   </div>
                 </div>
                 {/* Project content */}
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-xl font-bold text-amber-50 mb-2">
-                    {project.title}
-                  </h3>
+                <div className="p-4 sm:p-6 flex-1 flex flex-col">
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-amber-50 flex-1">
+                      {project.title}
+                    </h3>
+                    {project.isPackage && (
+                      <span className="ml-2 px-2 py-1 text-xs font-medium bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] text-[#121212] rounded-full">
+                        NPM Package
+                      </span>
+                    )}
+                  </div>
+                  {project.startedDate && project.completedDate && (
+                    <p className="text-xs text-amber-50/60 mb-2">
+                      {project.startedDate} - {project.completedDate}
+                    </p>
+                  )}
                   <p className="text-amber-50/70 text-sm leading-relaxed flex-1">
                     {project.description}
                   </p>
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mt-4">
+                  <div className="flex flex-wrap gap-2 mt-3 sm:mt-4">
                     {project.tags
                       .filter(
                         (tag) => tag !== "frontend" && tag !== "fullstack"
@@ -314,7 +348,13 @@ export const Projects = () => {
                       .map((tag, i) => (
                         <span
                           key={i}
-                          className="px-3 py-1 text-xs font-medium bg-[#252525] text-[#FFBE5E] rounded-full border border-[#FFBE5E]/20"
+                          className={`px-2 sm:px-3 py-1 text-xs font-medium rounded-full border ${
+                            tag === "Open Source"
+                              ? "bg-green-500/10 text-green-400 border-green-400/20"
+                              : tag === "NPM Package"
+                              ? "bg-red-500/10 text-red-400 border-red-400/20"
+                              : "bg-[#252525] text-[#FFBE5E] border-[#FFBE5E]/20"
+                          }`}
                         >
                           {tag}
                         </span>
@@ -325,18 +365,18 @@ export const Projects = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-16">
+        <div className="flex justify-center mt-12 md:mt-16">
           <a
             href="https://github.com/3Sangeetha3"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative inline-flex items-center gap-3 px-8 py-4 bg-[#1E1E1F] text-[#FFBE5E] font-medium rounded-xl shadow-lg hover:shadow-[#FFBE5E]/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden group"
+            className="relative inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-[#1E1E1F] text-[#FFBE5E] font-medium rounded-xl shadow-lg hover:shadow-[#FFBE5E]/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden group"
           >
             <span className="absolute inset-0 rounded-xl p-0.5 bg-gradient-to-r from-[#FCD26B]/0 to-[#FFBE5E]/0 group-hover:from-[#FCD26B] group-hover:to-[#FFBE5E] transition-all duration-300 -z-10"></span>
 
             <span className="absolute inset-0 bg-[#1E1E1F] rounded-xl -z-10 group-hover:bg-[#202022] transition-colors group-hover:inset-0.5"></span>
-            <Code size={20} />
-            <span className="text-base">View More Projects</span>
+            <Code size={18} className="sm:w-5 sm:h-5" />
+            <span className="text-sm sm:text-base">View More Projects</span>
             <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-[#FCD26B] to-[#FFBE5E] group-hover:w-full transition-all duration-500"></span>
           </a>
         </div>
